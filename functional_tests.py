@@ -32,7 +32,7 @@ class NewVisitorTest( unittest.TestCase ):
 		self.browser.get( 'http://localhost:8000' )
 
 		# She notices the page's title mentionning to-do lists
-		self.assertIn( 'To-Do', self.browser.title )
+		self.assertIn( 'To-Do lists', self.browser.title )
 
 		self.fail( 'This test is not entirely written yet!' )
 
