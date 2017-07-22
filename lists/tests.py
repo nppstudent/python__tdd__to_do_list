@@ -1,5 +1,8 @@
 from django.test import TestCase
+from django.core.urlresolvers import resolve
+from lists.views import home_page
 
 class DummyTest( TestCase ):
-	def test_fail_always( self ):
-		self.assertEqual( 1 + 1, 3 )
+	def test_root_url_resolves_to_home_page_view( self ):
+		found = resolve( '/' )
+		self.assertEqual( found.func, home_page )
