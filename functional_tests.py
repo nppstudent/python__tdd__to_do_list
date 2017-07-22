@@ -27,12 +27,28 @@ class NewVisitorTest( unittest.TestCase ):
 	def tearDown( self ):
 		self.browser.quit()
 
-	def test_can_start_a_list_and_retrieve_it_later( self ):		
+	def test_can_start_a_list_and_retrieve_it_later( self ):
+		# User comes visit our homepage
 		self.browser.get( 'http://localhost:8000' )
 
+		# She notices the page's title mentionning to-do lists
 		self.assertIn( 'To-Do', self.browser.title )
 
 		self.fail( 'This test is not entirely written yet!' )
+
+		# She is invited to enter a to-do item right away
+
+		# She types "Buy peacock feathers" into a text box
+
+		# When she hits enter, the page updates, and now comports a list with one item: "1: Buy peacock feathers"
+
+		# There is still a text box inviting her to enter another item. She enters "Use peacock feather to make a fly"
+
+		# The page updates and now comports a list with two items: "1: Buy peacock feathers" and "2: Use peacock feather to make a fly"
+
+		# She wonders whether the site will remember her list. She then notices that the page displays a special URL for her to access her to-do list.
+
+		# She visits that URL. Her list is still there.
 
 if __name__ == '__main__':
 	unittest.main()
