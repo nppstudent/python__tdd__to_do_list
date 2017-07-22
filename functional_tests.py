@@ -22,7 +22,7 @@ import unittest
 class NewVisitorTest( unittest.TestCase ):
 	def setUp( self ):
 		self.browser = webdriver.Firefox()
-		self.browser.implicitely_wait( 3 ) # Gives 3 seconds for content to load before starting to fail tests!
+		self.browser.implicitly_wait( 3 ) # Gives 3 seconds for content to load before starting to fail tests!
 
 	def tearDown( self ):
 		self.browser.quit()
